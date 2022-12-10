@@ -30,7 +30,7 @@ class GroceryAdapter(private val context: Context, private val dataset : List<Gr
         holder.imag.setImageResource(item.item_image)
 
         holder.card.setOnClickListener {
-            Toast.makeText(context,"Card View Just clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,item.item_name, Toast.LENGTH_SHORT).show()
         }
 
     }
