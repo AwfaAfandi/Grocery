@@ -15,10 +15,8 @@ class Datasource {
         Grocery(R.drawable.images , "Orange" , " round usually sweet juicy fruit with a yellowish to reddish orange rind " , "5 SAR"),
         Grocery(R.drawable.fresh_pineapple_fruit_free_vector , "pineapple" , " edible tropical fruit somewhat resembling a pine cone" , "15 SAR")
 
+)
 
 
-
-
-       )
     }
 }
