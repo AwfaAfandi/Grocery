@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.amaa.grocery.Activitydetails
 import com.amaa.grocery.R
 import com.amaa.grocery.model.Grocery
 
@@ -30,7 +31,16 @@ class GroceryAdapter(private val context: Context, private val dataset : List<Gr
         holder.imag.setImageResource(item.item_image)
 
         holder.card.setOnClickListener {
-            Toast.makeText(context,item.item_name, Toast.LENGTH_SHORT).show()
+
+
+            val context = holder.itemView.context
+            val intent = Intent(context, Activitydetails :: class.java)
+            intent.putExtra("Letter" , item.item_name)
+            intent.putExtra("Descr" , item.item_description)
+            intent.putExtra("image", item.item_image)
+            context.startActivity(intent)
+
+
         }
 
     }

@@ -7,13 +7,15 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.amaa.grocery.adapter.GroceryAdapter
 import com.amaa.grocery.data.Datasource
+import com.amaa.grocery.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val datset = Datasource().LoadItems()
 
